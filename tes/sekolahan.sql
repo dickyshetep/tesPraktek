@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2018 at 04:14 AM
+-- Generation Time: Feb 26, 2018 at 05:30 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.2
 
@@ -44,6 +44,25 @@ INSERT INTO `guru` (`Id_guru`, `Nama_guru`, `Id_matkul`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kelas`
+--
+
+CREATE TABLE `kelas` (
+  `id_kelas` varchar(20) NOT NULL,
+  `Nama_kelas` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kelas`
+--
+
+INSERT INTO `kelas` (`id_kelas`, `Nama_kelas`) VALUES
+('K1', 'XI IPS'),
+('K2', 'XII IPA 2');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `matapelajaran`
 --
 
@@ -61,15 +80,16 @@ CREATE TABLE `matapelajaran` (
 CREATE TABLE `murid` (
   `Nim` varchar(20) NOT NULL,
   `Nama_murid` varchar(50) NOT NULL,
-  `id_kelas` varchar(50) NOT NULL
+  `id_kelas` varchar(50) NOT NULL,
+  `alamat` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `murid`
 --
 
-INSERT INTO `murid` (`Nim`, `Nama_murid`, `id_kelas`) VALUES
-('Nim_123', 'Dicky suryo', 'K1');
+INSERT INTO `murid` (`Nim`, `Nama_murid`, `id_kelas`, `alamat`) VALUES
+('Nim_123', 'Dicky suryo', 'K1', 'sugihwaras');
 
 -- --------------------------------------------------------
 
